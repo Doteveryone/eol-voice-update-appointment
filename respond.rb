@@ -12,5 +12,7 @@ get '/' do
 
   Twilio::TwiML::Response.new do |r|
     r.Say 'What do you want to do?'
+    r.Pause length: 5
+    r.Say 'Are you Lucy?'
   end.text
 end
